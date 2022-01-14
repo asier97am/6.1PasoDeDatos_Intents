@@ -7,26 +7,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Button;
 
 public class Activity_decenas extends AppCompatActivity {
 
     TextView tv2;
     EditText et2;
+    Button bt2;
     String mensaje;
-    Bundle extras = this.getIntent().getExtras();
+    Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_decenas);
 
+        bt2 = findViewById(R.id.bt2);
+
         tv2 = findViewById(R.id.tv2);
         et2 = findViewById(R.id.et2);
-        //Bundle extras = this.getIntent().getExtras();
+        extras = this.getIntent().getExtras();
         mensaje = extras.getString("centenas");
         tv2.setText(mensaje);
-
-
 
 
     }
@@ -37,7 +39,6 @@ public class Activity_decenas extends AppCompatActivity {
         //String centenas= tv2.getText().toString();
         String centenas=extras.getString("centenas");
 
-
         Intent my_intent_decenas = new Intent(this, Activity_unidades.class);
 
         my_intent_decenas.putExtra("centenas", centenas);
@@ -46,7 +47,7 @@ public class Activity_decenas extends AppCompatActivity {
 
     }
 
-//    public void siguiente(View view) {
+//    public void s3guiente(View view) {
 //
 //        et2 = findViewById(R.id.et3);
 //        String mensaje_siguiente = et2.getText().toString();

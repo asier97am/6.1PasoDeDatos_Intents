@@ -7,32 +7,32 @@
     tools:context=".Activity_resultado">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvDatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="102dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        android:hint="Datos"
+        app:layout_constraintStart_toStartOf="@+id/btnConvertirBinario"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnConvertirBinario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"
-        android:text="Button"
+        android:text="Convertir a Binario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDatos" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvBinario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginTop="55dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:hint="BINARIO"
+        app:layout_constraintStart_toStartOf="@+id/btnConvertirBinario"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertirBinario" />
 </androidx.constraintlayout.widget.ConstraintLayout>
