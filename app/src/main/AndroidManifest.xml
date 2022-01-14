@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.61Conversion_a_binario">
         <activity
-            android:name=".activity_unidades"
+            android:name=".Activity_unidades"
             android:exported="true" />
         <activity
-            android:name=".activity_decenas"
+            android:name=".Activity_decenas"
             android:exported="true" />
         <activity
-            android:name=".activity_centenas"
+            android:name=".Activity_centenas"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".activityResultado"
+            android:name=".Activity_resultado"
             android:exported="true">
 
         </activity>

@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class activity_decenas extends AppCompatActivity {
+public class Activity_decenas extends AppCompatActivity {
 
     TextView tv2;
     EditText et2;
     String mensaje;
+    Bundle extras = this.getIntent().getExtras();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class activity_decenas extends AppCompatActivity {
 
         tv2 = findViewById(R.id.tv2);
         et2 = findViewById(R.id.et2);
-        Bundle extras = this.getIntent().getExtras();
+        //Bundle extras = this.getIntent().getExtras();
         mensaje = extras.getString("centenas");
         tv2.setText(mensaje);
 
@@ -32,8 +33,12 @@ public class activity_decenas extends AppCompatActivity {
     public void siguiente(View vista) {
         et2 = findViewById(R.id.et2);
         String decenas = et2.getText().toString();
-        String centenas= tv2.getText().toString();
-        Intent my_intent_decenas = new Intent(this, activity_unidades.class);
+
+        //String centenas= tv2.getText().toString();
+        String centenas=extras.getString("centenas");
+
+
+        Intent my_intent_decenas = new Intent(this, Activity_unidades.class);
 
         my_intent_decenas.putExtra("centenas", centenas);
         my_intent_decenas.putExtra("decenas", decenas);
