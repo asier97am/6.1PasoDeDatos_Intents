@@ -34,7 +34,9 @@ public class Activity_resultado extends AppCompatActivity {
         String resultado=centenas+decenas+unidades;
         int numero=Integer.parseInt(resultado);
 
-        tvDatos.setText(numero);
+
+        //hay que pasar String o sino castear
+        tvDatos.setText(resultado);
 
         String binario = Integer.toBinaryString(numero);
         tvBinario.setText(binario);
